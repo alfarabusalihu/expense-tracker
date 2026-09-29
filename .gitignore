@@ -1,0 +1,52 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/.dart_tool/
+**/.pub-cache/
+**/.pub/
+**/build/
+.flutter-plugins-dependencies
+
+# Symbol files
+*.sublime-workspace
+
+# Environment & secret config — NEVER commit these
+.env
+lib/firebase_options.dart
+
+# Firebase service account keys (contains API keys)
+**/android/app/google-services.json
+**/ios/Runner/GoogleService-Info.plist
+
+# Android related
+**/android/app/key.properties
+**/android/app/local.properties
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+
+# iOS/macOS related
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Pods/
+**/ios/.symlinks/
+
+# IDE
+.idea/
+*.iml
+
+# Coverage
+coverage/

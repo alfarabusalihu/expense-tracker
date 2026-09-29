@@ -1,0 +1,58 @@
+[
+  {
+    "id": "seed_1",
+    "title": "Supermarket Groceries",
+    "amount": 1250000,
+    "category": "food",
+    "date": "2026-09-25T14:30:00.000Z",
+    "note": "Fresh fruits, vegetables, and household supplies"
+  },
+  {
+    "id": "seed_2",
+    "title": "Electricity Bill",
+    "amount": 850000,
+    "category": "bills",
+    "date": "2026-09-20T09:15:00.000Z",
+    "note": "Monthly power bill"
+  },
+  {
+    "id": "seed_3",
+    "title": "Fuel & Petrol",
+    "amount": 450000,
+    "category": "transport",
+    "date": "2026-09-18T17:45:00.000Z",
+    "note": "Car fuel refilling"
+  },
+  {
+    "id": "seed_4",
+    "title": "Dinner with Friends",
+    "amount": 680000,
+    "category": "food",
+    "date": "2026-09-15T20:00:00.000Z",
+    "note": "Italian restaurant dinner"
+  },
+  {
+    "id": "seed_5",
+    "title": "Movie Tickets & Snacks",
+    "amount": 320000,
+    "category": "entertainment",
+    "date": "2026-09-10T18:30:00.000Z",
+    "note": "Weekend movie night"
+  },
+  {
+    "id": "seed_6",
+    "title": "Monthly Fiber Internet",
+    "amount": 550000,
+    "category": "bills",
+    "date": "2026-09-05T11:00:00.000Z",
+    "note": "High-speed broadband"
+  },
+  {
+    "id": "seed_7",
+    "title": "New Running Shoes",
+    "amount": 1450000,
+    "category": "shopping",
+    "date": "2026-09-02T15:20:00.000Z",
+    "note": "Sports shoes purchase"
+  }
+]

@@ -1,0 +1,34 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions for user authentication & security validation
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidExpense(data) {
+      return data.keys().hasAll(['title', 'amount', 'category', 'date', 'createdAt', 'updatedAt'])
+        && data.title is string
+        && data.title.trim().size() > 0
+        && data.title.trim().size() <= 100
+        && data.amount is int
+        && data.amount > 0
+        && data.category is string
+        && data.date is timestamp
+        && (data.note == null || (data.note is string && data.note.size() <= 500));
+    }
+
+    // User expense collection: users/{userId}/expenses/{expenseId}
+    match /users/{userId}/expenses/{expenseId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidExpense(request.resource.data);
+      allow update: if isOwner(userId) && isValidExpense(request.resource.data);
+      allow delete: if isOwner(userId);
+    }
+  }
+}
